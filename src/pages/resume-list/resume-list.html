@@ -1,0 +1,136 @@
+<ion-content>
+<div class="wrapper" *ngIf="resume">
+  <div class="sidebar-wrapper">
+    <div class="profile-container">
+<img class="profile" src="{{resume.profile_img_url}}"
+  alt="" />
+      <h1 class="name">{{resume.name}}</h1>
+      <h3 class="tagline">{{resume.roles_desc}}</h3>
+    </div>
+    <!--//profile-container-->
+
+    <div class="contact-container container-block">
+      <ul class="list-unstyled contact-list">
+        <li class="email">
+          <i class="fa fa-envelope"></i>
+          <a href="mailto: {{resume.email}}">{{resume.email}}</a>
+        </li>
+        <li class="phone">
+          <i class="fa fa-phone"></i>
+          <a>{{resume.phone}}</a>
+        </li>
+        <li *ngIf="resume.website" class="website">
+          <i class="fa fa-globe"></i>
+          <a href="#" target="_blank">{{resume.website}}</a>
+        </li>
+        <li *ngIf="resume.linkedin" class="linkedin">
+          <i class="fa fa-linkedin"></i>
+          <a href="#" target="_blank">{{resume.linkedin}}</a>
+        </li>
+        <li *ngIf="resume.github" class="github">
+          <i class="fa fa-github"></i>
+          <a href="#" target="_blank">{{resume.github}}</a>
+        </li>
+        <li *ngIf="resume.twitter" class=" twitter ">
+          <i class="fa fa-twitter"></i>
+          <a href="{{resume.twitter}}" target="_blank">{{resume.twitter}}</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="education-container container-block">
+      <h2 class="container-block-title">Education</h2>
+        <div class="item" *ngFor="let edu of resume.educations">
+        <h4 class="degree">{{edu.title}} in {{edu.course}}</h4>
+        <h5 class="meta">{{edu.location}}</h5>
+        <div class="time">{{edu.start_date | date:'yyyy'}} - {{edu.end_date | date:'yyyy'}}</div>
+      </div>
+    </div>
+
+<div class="languages-container container-block">
+      <h2 class="container-block-title">Languages</h2>
+        <ul class="list-unstyled interests-list" *ngFor="let language of resume.languages">
+        <li>{{language.name}}
+          <span class="lang-desc">{{language.level}}</span>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="interests-container container-block">
+      <h2 class="container-block-title">Interests</h2>
+      <ul class="list-unstyled interests-list" *ngFor="let interest of resume.interests">
+        <li>interest.description</li>
+      </ul>
+    </div>
+    <!--//interests-->
+
+  </div>
+  <!--//sidebar-wrapper-->
+
+  <div class="main-wrapper">
+
+    <section class="section summary-section">
+      <h2 class="section-title">
+        <i class="fa fa-user"></i>Career Profile</h2>
+      <div class="summary">
+        <p>{{resume.carrer_desc}}</p>
+      </div>
+    </section>
+    
+    <section class="section experiences-section">
+      <h2 class="section-title">
+        <i class="fa fa-briefcase"></i>Experiences</h2>
+
+      <div class="item" *ngFor="let xp of resume.experiences">
+        <div class="meta">
+          <div class="upper-row">
+            <h3 class="job-title">{{xp.subtitle}}</h3>
+            <div class="time">{{xp.start_date | date:'MMM yyyy'}} - {{xp.end_date | date:'MMM yyyy'}}</div>
+          </div>
+          <!--//upper-row-->
+          <div class="company">{{xp.title}}, {{xp.location}}</div>
+        </div>
+        <!--//meta-->
+        <div class="details">
+          <p>{{xp.description}} </p>
+        </div>
+        <!--//details-->
+      </div>
+      <!--//item-->
+
+    </section>
+    <!--//section-->
+
+    <section class="skills-section section">
+      <h2 class="section-title">
+        <i class="fa fa-rocket"></i>Skills &amp; Proficiency</h2>
+      <div class="skillset">
+        <div class="item" *ngFor="let skill of resume.skills">
+          <h3 *ngIf="skill.description" class="level-title">{{skill.description}}</h3>
+          <div class="level-bar">
+            <div class="level-bar-inner" [ngStyle]="{'width': skill.level}" data-level="skill.level">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+  <!--//main-body-->
+</div>
+
+<footer class="footer">
+  <div class="text-center">
+    <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can check out other license options via our website: themes.3rdwavemedia.com */-->
+    <small class="copyright">Designed with
+      <i class="fa fa-heart"></i> by
+      <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+  </div>
+  <!--//container-->
+</footer>
+<!--//footer-->
+
+</ion-content>
+
+
