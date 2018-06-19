@@ -85,14 +85,17 @@
         <div class="meta">
           <div class="upper-row">
             <h3 class="job-title">{{xp.subtitle}}</h3>
-            <div class="time">{{xp.start_date | date:'MMM yyyy'}} - {{xp.end_date | date:'MMM yyyy'}}</div>
+            <div class="time">{{xp.start_date | date:'MMM yyyy'}} - {{xp.end_date.month}}
+              <label class="date" *ngIf="xp.end_date">{{xp.end_date | date:'MMM yyyy'}} </label>
+              <label class="date" *ngIf="!xp.end_date">Present</label>
+            </div>
           </div>
           <!--//upper-row-->
           <div class="company">{{xp.title}}, {{xp.location}}</div>
         </div>
         <!--//meta-->
         <div class="details">
-          <p>{{xp.description}} </p>
+          <div [innerHTML]="xp.description"></div>
         </div>
         <!--//details-->
       </div>

@@ -8,7 +8,7 @@ import { Resume } from '../../models/resume';
 })
 export class ResumeListPage {
   
-  resumeList: Resume;
+  public resume: Resume;
   
   constructor(
     public navCtrl: NavController,
@@ -16,11 +16,11 @@ export class ResumeListPage {
   ) {
     this.findAllResumes();
   }
-
+  
   private findAllResumes() { 
     this._resumeDataService.findAll()
       .subscribe(
-        function (data) {
+        function (data: Resume[]) {
           if(data && data.length > 0) {
             this.resume = data[0];
           }

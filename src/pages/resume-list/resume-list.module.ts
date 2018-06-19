@@ -22,6 +22,7 @@ import { HttpModule } from '@angular/http';
 
 @Component({
   selector: 'resume-list',
-    templateUrl: 'resume-list.html' 
+  templateUrl: 'resume-list.html'
+
 })
 export class ResumeListModule {}
