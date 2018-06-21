@@ -86,8 +86,8 @@
           <div class="upper-row">
             <h3 class="job-title">{{xp.subtitle}}</h3>
             <div class="time">{{xp.start_date | date:'MMM yyyy'}} - {{xp.end_date.month}}
-              <label class="date" *ngIf="xp.end_date">{{xp.end_date | date:'MMM yyyy'}} </label>
-              <label class="date" *ngIf="!xp.end_date">Present</label>
+              <label class="date" *ngIf="isValidEndDate(xp.end_date)">{{xp.end_date | date:'MMM yyyy'}} </label>
+              <label class="date" *ngIf="!isValidEndDate(xp.end_date)">Present</label>
             </div>
           </div>
           <!--//upper-row-->

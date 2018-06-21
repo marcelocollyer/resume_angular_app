@@ -27,4 +27,18 @@ export class ResumeListPage {
         }.bind(this)
       );
   }
+
+  private isValidEndDate(endDate) : any {
+    
+    let value: Date;
+    if(endDate) {
+      if(endDate instanceof Date) {
+        value = endDate;
+      } else {
+        value = new Date(endDate);
+      }
+    }
+    let year = value.getFullYear();
+    return year > 1;
+  }
 }
