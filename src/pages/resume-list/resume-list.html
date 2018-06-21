@@ -106,16 +106,36 @@
 
     <section class="skills-section section">
       <h2 class="section-title">
-        <i class="fa fa-rocket"></i>Skills &amp; Proficiency</h2>
+      <i class="fa fa-rocket"></i>Skills &amp; Proficiency</h2>
       <div class="skillset">
-        <div class="item" *ngFor="let skill of resume.skills">
-          <h3 *ngIf="skill.description" class="level-title">{{skill.description}}</h3>
-          <div class="level-bar">
-            <div class="level-bar-inner" [ngStyle]="{'width': skill.level}" data-level="skill.level">
+          <div *ngFor="let skill of resume.skills">
+            
+            <div class="row, item" (click)="skill.expanded = !skill.expanded">
+              <h3 *ngIf="skill.description" class="level-title">
+                <i *ngIf="!skill.expanded && skill.children.length > 0" class="fa fa-angle-right"></i>
+                <i *ngIf="skill.expanded" class="fa fa-angle-down"></i>
+                <label> </label>
+                {{skill.description}}
+              </h3>
+              <div class="level-bar">
+                <div class="level-bar-inner" [ngStyle]="{'width': skill.level}" data-level="skill.level">
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
+            
+            <div *ngIf="skill.expanded">
+              <div class="item" style="margin-left: 24px;" *ngFor="let innerSkill of skill.children">
+                <h3 *ngIf="innerSkill.description" class="level-title">
+                  - {{innerSkill.description}}
+                </h3>
+                <div class="level-bar">
+                <div class="level-bar-inner" [ngStyle]="{'width': innerSkill.level, 'background': '#abd4de'}" data-level="innerSkill.level">
+                  </div>
+                </div>
+              </div>
+            </div>
 
+          </div>
       </div>
     </section>
 
