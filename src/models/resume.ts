@@ -1,6 +1,7 @@
 import { Experience } from "./experience";
 import { Education } from "./education";
 import { Language } from "./language";
+import { Certification } from "./certification";
 import { Interest } from "./interest";
 import { Skill } from "./skill";
 
@@ -19,6 +20,7 @@ export class Resume {
   experiences: Experience[];
   educations: Education[];
   languages: Language[];
+  certifications: Certification[];
   interests: Interest[];
   skills: Skill[];
 
@@ -37,6 +39,7 @@ export class Resume {
     experiences: Experience[],
     educations: Education[],
     languages: Language[],
+    certifications: Certification[],
     interests: Interest[],
     skills: Skill[],
   ) {
@@ -54,6 +57,7 @@ export class Resume {
     this.experiences = experiences;
     this.educations = educations;
     this.languages = languages;
+    this.certifications = certifications;
     this.interests = interests;
     this.skills = skills;
   }
