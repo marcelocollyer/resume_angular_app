@@ -90,6 +90,9 @@ p {
   margin-top: 0;
   margin-bottom: 0;
 }
+.sidebar-wrapper .tagline p{
+  line-height: 8px;
+}
 .sidebar-wrapper .profile {
   margin-bottom: 15px;
   display: inline-block;

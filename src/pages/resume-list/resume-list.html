@@ -5,7 +5,7 @@
 <img class="profile" src="{{resume.profile_img_url}}"
   alt="" />
       <h1 class="name">{{resume.name}}</h1>
-      <h3 class="tagline">{{resume.roles_desc}}</h3>
+      <h3 [innerHTML]="resume.roles_desc" class="tagline"></h3>
     </div>
     <!--//profile-container-->
 
