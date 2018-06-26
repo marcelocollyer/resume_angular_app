@@ -38,7 +38,7 @@
       </ul>
     </div>
 
-    <div class="education-container container-block">
+    <div class="education-container container-block-secondary">
       <h2 class="container-block-title">Education</h2>
         <div class="item" *ngFor="let edu of resume.educations">
         <h4 class="degree">{{edu.title}} in {{edu.course}}</h4>
@@ -47,7 +47,7 @@
       </div>
     </div>
 
-    <div class="languages-container container-block">
+    <div class="languages-container container-block-secondary">
       <h2 class="container-block-title">Languages</h2>
         <ul class="list-unstyled interests-list" *ngFor="let language of resume.languages">
         <li>{{language.name}}
@@ -56,7 +56,7 @@
       </ul>
     </div>
 
-    <div class="languages-container container-block">
+    <div class="languages-container container-block-secondary">
       <h2 class="container-block-title">Certifications</h2>
       <ul class="list-unstyled interests-list" *ngFor="let cert of resume.certifications">
         <li>{{cert.description}}
@@ -65,7 +65,7 @@
       </ul>
     </div>
 
-    <div class="interests-container container-block">
+    <div class="interests-container container-block-secondary">
       <h2 class="container-block-title">Interests</h2>
       <ul class="list-unstyled interests-list" *ngFor="let interest of resume.interests">
         <li>{{interest.description}}</li>
