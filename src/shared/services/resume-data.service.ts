@@ -1,4 +1,4 @@
-import { DataService } from './data.service';
+
 import { Observable } from 'rxjs/Observable';
 import { Inject, Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
@@ -6,13 +6,16 @@ import 'rxjs/Rx';
 import { Resume } from "../../models/resume";
 
 @Injectable()
-export class ResumeDataService extends DataService {
+export class ResumeDataService {
+  protected _baseUrl: string;
   private endpointUri = '/resumes';     
 
   constructor(
-    @Inject(Http) http: Http
+    @Inject(Http) private _http: Http,
+    @Inject(Window) private _window: Window
+    
   ) {
-    super(http);
+    this._baseUrl = `http://${this._window.location.hostname}:8000`;
   }
 
   findById(id: number) {

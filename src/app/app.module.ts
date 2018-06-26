@@ -26,6 +26,7 @@ import { ResumeListPage } from '../pages/resume-list/resume-list';
   providers: [
     StatusBar,
     SplashScreen,
+    {provide: Window, useValue: window},
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
