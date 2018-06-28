@@ -17,7 +17,7 @@
         </li>
         <li class="phone">
           <i class="fa fa-phone"></i>
-          <a>{{resume.phone}}</a>
+          <a href="tel:{{resume.phone}}">{{resume.phone}}</a>
         </li>
         <li class="phone">
         <i class="fa fa-skype"></i>
@@ -25,19 +25,19 @@
         </li>
         <li *ngIf="resume.website" class="website">
           <i class="fa fa-globe"></i>
-          <a href="#" target="_blank">{{resume.website}}</a>
+          <a href="http://{{resume.website}}" target="_blank">{{resume.website}}</a>
         </li>
         <li *ngIf="resume.linkedin" class="linkedin">
           <i class="fa fa-linkedin"></i>
-          <a href="#" target="_blank">{{resume.linkedin}}</a>
+          <a href="http://{{resume.linkedin}}" target="_blank">{{resume.linkedin}}</a>
         </li>
         <li *ngIf="resume.github" class="github">
           <i class="fa fa-github"></i>
-          <a href="#" target="_blank">{{resume.github}}</a>
+          <a href="http://{{resume.github}}" target="_blank">{{resume.github}}</a>
         </li>
         <li *ngIf="resume.twitter" class=" twitter ">
           <i class="fa fa-twitter"></i>
-          <a href="{{resume.twitter}}" target="_blank">{{resume.twitter}}</a>
+          <a href="http://{{resume.twitter}}" target="_blank">{{resume.twitter}}</a>
         </li>
       </ul>
     </div>
