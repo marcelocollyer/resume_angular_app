@@ -5,17 +5,18 @@ import { Http, Response } from '@angular/http';
 import 'rxjs/Rx';
 import { Resume } from "../../models/resume";
 
+declare var window: any;
+
 @Injectable()
 export class ResumeDataService {
   protected _baseUrl: string;
-  private endpointUri = '/resumes';     
+  private endpointUri = '/resumes';   
+    
 
   constructor(
-    @Inject(Http) private _http: Http,
-    @Inject(Window) private _window: Window
-    
+    @Inject(Http) private _http: Http
   ) {
-    this._baseUrl = `http://${this._window.location.hostname}:8000`;
+    this._baseUrl = `http://${window.location.hostname}:8000`;
   }
 
   findById(id: number) {

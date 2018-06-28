@@ -28,7 +28,7 @@ export class ResumeListPage {
       );
   }
 
-  private isValidEndDate(endDate) : any {
+  public isValidEndDate(endDate) : any {
     
     let value: Date;
     if(endDate) {

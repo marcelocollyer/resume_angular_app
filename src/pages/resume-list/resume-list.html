@@ -94,7 +94,7 @@
       <h2 class="section-title">
         <i class="fa fa-briefcase"></i>Experiences</h2>
 
-      <div class="item" *ngFor="let xp of resume.experiences">
+      <div class="item" *ngFor="let xp of resume.experiences; let last = last">
         <div class="meta">
           <div class="upper-row">
             <h3 class="job-title">{{xp.subtitle}}</h3>
@@ -110,6 +110,7 @@
         <div class="details">
           <div [innerHTML]="xp.description"></div>
         </div>
+        <hr *ngIf="!last">
         <!--//details-->
       </div>
       <!--//item-->
