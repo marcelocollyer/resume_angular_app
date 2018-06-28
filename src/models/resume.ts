@@ -11,6 +11,7 @@ export class Resume {
   profile_img_url: string;
   email: string;
   phone: string;
+  skype: string;
   website: string;
   linkedin: string;
   github: string;
@@ -30,6 +31,7 @@ export class Resume {
     profile_img_url: string,
     email: string,
     phone: string,
+    skype: string,
     website: string,
     linkedin: string,
     github: string,
@@ -48,6 +50,7 @@ export class Resume {
     this.profile_img_url = profile_img_url;
     this.email = email;
     this.phone = phone;
+    this.skype = skype;
     this.website = website;
     this.linkedin = linkedin;
     this.github = github;
