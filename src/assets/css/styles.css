@@ -208,7 +208,7 @@ p {
   top: -2px;
 }
 .main-wrapper .section {
-  margin-bottom: 48px;
+  margin-bottom: 40px;
 }
 .main-wrapper .experiences-section .item {
   margin-bottom: 0px;
@@ -258,6 +258,7 @@ p {
   font-size: 14px;
   margin-top: 0;
   margin-bottom: 12px;
+  color: rgb(84, 94, 108);
 }
 .skillset .level-bar {
   height: 12px;
@@ -266,6 +267,12 @@ p {
 .skillset .level-bar-inner {
   height: 12px;
   background: #7bc2d3;
+}
+.details {
+  color: rgb(84, 94, 108);
+}
+.summary {
+  color: rgb(84, 94, 108);
 }
 .footer {
   padding: 30px;

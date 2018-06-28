@@ -140,7 +140,7 @@
             <div *ngIf="skill.expanded">
               <div class="item" style="margin-left: 24px;" *ngFor="let innerSkill of skill.children">
                 <h3 *ngIf="innerSkill.description" class="level-title">
-                  - {{innerSkill.description}}
+                &sdot; {{innerSkill.description}}
                 </h3>
                 <div class="level-bar">
                 <div class="level-bar-inner" [ngStyle]="{'width': innerSkill.level, 'background': '#abd4de'}" data-level="innerSkill.level">
