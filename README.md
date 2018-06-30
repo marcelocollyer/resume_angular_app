@@ -1,8 +1,11 @@
+# resume_angular_app
 Resume front-end application developed with Ionic Framework (Angular)
+
 
 This simple application has been developed to be used with a back-end project wrote using GOlang.
 You need to setup the back-end first to have the full experience.
 Please check for more information here: https://github.com/marcelocollyer/resume_go_app 
+
 
 To setup this project, please check if you have all the following pre-requirements:
 
